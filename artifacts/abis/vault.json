@@ -1,0 +1,1223 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "activation",
+                "offset": 0,
+                "type": "Uint256"
+            },
+            {
+                "name": "last_report",
+                "offset": 2,
+                "type": "Uint256"
+            },
+            {
+                "name": "current_debt",
+                "offset": 4,
+                "type": "Uint256"
+            },
+            {
+                "name": "max_debt",
+                "offset": 6,
+                "type": "Uint256"
+            }
+        ],
+        "name": "StrategyParams",
+        "size": 8,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "from_",
+                "type": "felt"
+            },
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Transfer",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "spender",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Approval",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Paused",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Unpaused",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Deposit",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "receiver",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "Uint256"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Withdraw",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyAdded",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyRevoked",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "old_strategy",
+                "type": "felt"
+            },
+            {
+                "name": "new_strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyMigrated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "gain",
+                "type": "Uint256"
+            },
+            {
+                "name": "loss",
+                "type": "Uint256"
+            },
+            {
+                "name": "current_debt",
+                "type": "Uint256"
+            },
+            {
+                "name": "total_fees",
+                "type": "Uint256"
+            },
+            {
+                "name": "total_refunds",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyReported",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "current_debt",
+                "type": "Uint256"
+            },
+            {
+                "name": "new_debt",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "DebtUpdated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "accountant",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateAccountant",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "new_debt",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdatedMaxDebtForStrategy",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "deposit_limit",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateDepositLimit",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "minimum_total_idle",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateMinimumTotalIdle",
+        "type": "event"
+    },
+    {
+        "data": [],
+        "keys": [],
+        "name": "Shutdown",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "token",
+                "type": "felt"
+            },
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Sweep",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_role_manager",
+                "type": "felt"
+            },
+            {
+                "name": "_asset",
+                "type": "felt"
+            },
+            {
+                "name": "_name",
+                "type": "felt"
+            },
+            {
+                "name": "_symbol",
+                "type": "felt"
+            },
+            {
+                "name": "_profit_max_unlock_time",
+                "type": "Uint256"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_new_accountant",
+                "type": "felt"
+            }
+        ],
+        "name": "setAccountant",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_deposit_limit",
+                "type": "Uint256"
+            }
+        ],
+        "name": "setDepositLimit",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_minimum_total_idle",
+                "type": "Uint256"
+            }
+        ],
+        "name": "setMinimumTotalIdle",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_account",
+                "type": "felt"
+            },
+            {
+                "name": "_role",
+                "type": "felt"
+            }
+        ],
+        "name": "setRole",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_role",
+                "type": "felt"
+            }
+        ],
+        "name": "setOpenRole",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_role_manager",
+                "type": "felt"
+            }
+        ],
+        "name": "transferRoleManager",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "acceptRoleManager",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "pricePerShare",
+        "outputs": [
+            {
+                "name": "pricePerShare",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "availableDepositLimit",
+        "outputs": [
+            {
+                "name": "availableDepositLimit",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_strategy",
+                "type": "felt"
+            }
+        ],
+        "name": "processReport",
+        "outputs": [
+            {
+                "name": "gain",
+                "type": "Uint256"
+            },
+            {
+                "name": "loss",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "felt"
+            }
+        ],
+        "name": "sweep",
+        "outputs": [
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_new_strategy",
+                "type": "felt"
+            }
+        ],
+        "name": "addStrategy",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_old_strategy",
+                "type": "felt"
+            }
+        ],
+        "name": "revokeStrategy",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_new_strategy",
+                "type": "felt"
+            },
+            {
+                "name": "_old_strategy",
+                "type": "felt"
+            }
+        ],
+        "name": "migrateStrategy",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_strategy",
+                "type": "felt"
+            },
+            {
+                "name": "_new_max_debt",
+                "type": "Uint256"
+            }
+        ],
+        "name": "updateMaxDebtForStrategy",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_strategy",
+                "type": "felt"
+            },
+            {
+                "name": "_target_debt",
+                "type": "Uint256"
+            }
+        ],
+        "name": "updateDebt",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shutdownVault",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "mint",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            },
+            {
+                "name": "_owner",
+                "type": "felt"
+            },
+            {
+                "name": "_strategies_len",
+                "type": "felt"
+            },
+            {
+                "name": "_strategies",
+                "type": "felt*"
+            }
+        ],
+        "name": "withdraw",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            },
+            {
+                "name": "_owner",
+                "type": "felt"
+            },
+            {
+                "name": "_strategies_len",
+                "type": "felt"
+            },
+            {
+                "name": "_strategies",
+                "type": "felt*"
+            }
+        ],
+        "name": "redeem",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_spender",
+                "type": "felt"
+            },
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "approve",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "recipient",
+                "type": "felt"
+            },
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "recipient",
+                "type": "felt"
+            },
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_spender",
+                "type": "felt"
+            },
+            {
+                "name": "added_value",
+                "type": "Uint256"
+            }
+        ],
+        "name": "increaseAllowance",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_spender",
+                "type": "felt"
+            },
+            {
+                "name": "subtracted_value",
+                "type": "Uint256"
+            }
+        ],
+        "name": "decreaseAllowance",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_account",
+                "type": "felt"
+            }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+            {
+                "name": "balance",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+            {
+                "name": "totalSupply",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+            {
+                "name": "decimals",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalDebt",
+        "outputs": [
+            {
+                "name": "totalDebt",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "profitDistributionRate",
+        "outputs": [
+            {
+                "name": "profitDistributionRate",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalAssets",
+        "outputs": [
+            {
+                "name": "totalAssets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "convertToShares",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "previewDeposit",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "previewMint",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "convertToAssets",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "maxDeposit",
+        "outputs": [
+            {
+                "name": "maxDeposit",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "maxMint",
+        "outputs": [
+            {
+                "name": "maxMint",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "maxWithdraw",
+        "outputs": [
+            {
+                "name": "maxWithdraw",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "maxRedeem",
+        "outputs": [
+            {
+                "name": "maxRedeem",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "previewWithdraw",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "previewRedeem",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "asset",
+        "outputs": [
+            {
+                "name": "asset",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+            {
+                "name": "name",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+            {
+                "name": "symbol",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "felt"
+            },
+            {
+                "name": "_spender",
+                "type": "felt"
+            }
+        ],
+        "name": "allowance",
+        "outputs": [
+            {
+                "name": "remaining",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_strategy",
+                "type": "felt"
+            }
+        ],
+        "name": "strategies",
+        "outputs": [
+            {
+                "name": "strategyParameters",
+                "type": "StrategyParams"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalIdle",
+        "outputs": [
+            {
+                "name": "totalIdle",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "minimumTotalIdle",
+        "outputs": [
+            {
+                "name": "minimumTotalIdle",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "depositLimit",
+        "outputs": [
+            {
+                "name": "depositLimit",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "accountant",
+        "outputs": [
+            {
+                "name": "accountant",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_account",
+                "type": "felt"
+            }
+        ],
+        "name": "roles",
+        "outputs": [
+            {
+                "name": "role",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_role",
+                "type": "felt"
+            }
+        ],
+        "name": "openRoles",
+        "outputs": [
+            {
+                "name": "isOpen",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "roleManager",
+        "outputs": [
+            {
+                "name": "roleManager",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "futureRoleManager",
+        "outputs": [
+            {
+                "name": "futureRoleManager",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shutdown",
+        "outputs": [
+            {
+                "name": "shutdown",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "profitEndDate",
+        "outputs": [
+            {
+                "name": "profitEndDate",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "profitlastUpdate",
+        "outputs": [
+            {
+                "name": "profitlastUpdate",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

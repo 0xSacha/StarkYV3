@@ -1,0 +1,289 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "from_",
+                "type": "felt"
+            },
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Transfer",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "spender",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Approval",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Paused",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "account",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Unpaused",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Deposit",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "receiver",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "Uint256"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Withdraw",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyAdded",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyRevoked",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "old_strategy",
+                "type": "felt"
+            },
+            {
+                "name": "new_strategy",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyMigrated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "gain",
+                "type": "Uint256"
+            },
+            {
+                "name": "loss",
+                "type": "Uint256"
+            },
+            {
+                "name": "current_debt",
+                "type": "Uint256"
+            },
+            {
+                "name": "total_fees",
+                "type": "Uint256"
+            },
+            {
+                "name": "total_refunds",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "StrategyReported",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "current_debt",
+                "type": "Uint256"
+            },
+            {
+                "name": "new_debt",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "DebtUpdated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "accountant",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateAccountant",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "sender",
+                "type": "felt"
+            },
+            {
+                "name": "strategy",
+                "type": "felt"
+            },
+            {
+                "name": "new_debt",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdatedMaxDebtForStrategy",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "deposit_limit",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateDepositLimit",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "minimum_total_idle",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "UpdateMinimumTotalIdle",
+        "type": "event"
+    },
+    {
+        "data": [],
+        "keys": [],
+        "name": "Shutdown",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "token",
+                "type": "felt"
+            },
+            {
+                "name": "amount",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Sweep",
+        "type": "event"
+    }
+]
